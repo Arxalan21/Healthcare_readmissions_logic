@@ -1,0 +1,7 @@
+department_id,name,bed_capacity,avg_staff_ratio
+1,Cardiology,40,4.2
+2,Emergency,30,3.5
+3,Orthopedics,25,5.0
+4,Oncology,20,3.8
+5,General Medicine,50,5.5
+6,Pulmonology,18,4.0
