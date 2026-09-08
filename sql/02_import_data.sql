@@ -1,3 +1,12 @@
+/* =================================================================
+ File: 02_import_data.sql
+ Purpose: Loads CSV data into staging tables, then inserts cleaned
+          staging data into the final schema tables.
+ Run order: 2nd (after 01_Schemas.sql)
+ Author: Arsalan Gulzar
+ Project:Healthcare Readmissions Analysis
+ ==================================================================*/
+
 INSERT INTO dbo.departments
 (
 	department_id ,
