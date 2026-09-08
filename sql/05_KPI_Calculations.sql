@@ -1,3 +1,12 @@
+/* =================================================================
+ File: 05_KPI_Calculations.sql
+ Purpose: Calculates all project KPIs - Patient counts , department
+ volume, billing averages, diagnosis frequency,cost comparisons
+ Run order: 5th (Final step)
+ Author: Arsalan Gulzar
+ Project:Healthcare Readmissions Analysis
+ ==================================================================*/
+
 -- total patient count
 SELECT 
 COUNT(*) AS Total_Patients 
