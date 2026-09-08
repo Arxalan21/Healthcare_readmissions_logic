@@ -10,7 +10,7 @@ Project:Healthcare Readmissions Analysis
 Purpose: Creates all 6 tables for the Meridian Health database,
          including primary/foreign key relationships.
 Run order: 1st (before any other script)
--- ============================================================*/
+ ============================================================*/
 IF OBJECT_ID('dbo.departments', 'U') IS NOT NULL DROP TABLE dbo.departments;
 CREATE TABLE dbo.departments
 (
