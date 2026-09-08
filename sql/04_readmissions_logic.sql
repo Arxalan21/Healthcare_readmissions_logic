@@ -1,6 +1,11 @@
--- ============================================================
--- Core Task: Derive 30-Day Readmissions with Window Functions
--- ============================================================
+/* =================================================================
+ File: 
+ Purpose: Creates all 6 tables for the Meridian Health database,
+         including primary/foreign key relationships.
+ Run order: 1st (before any other script)
+ Author: Arsalan Gulzar
+ Project:Healthcare Readmissions Analysis
+ ==================================================================*/
 
 -- Step 1: Clean encounter base (exclude open/invalid LOS encounters)
 
