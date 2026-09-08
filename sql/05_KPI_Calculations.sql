@@ -1,7 +1,8 @@
 /* =================================================================
  File: 05_KPI_Calculations.sql
  Purpose: Calculates all project KPIs - Patient counts , department
- volume, billing averages, diagnosis frequency,cost comparisons
+ volume, billing averages, diagnosis frequency,cost comparisons,
+ Average_LOS by department , open encounters
  Run order: 5th (Final step)
  Author: Arsalan Gulzar
  Project:Healthcare Readmissions Analysis
@@ -53,6 +54,18 @@ COUNT(*) AS occurences
 FROM dbo.diagnoses
 GROUP BY diagnosis_desc
 ORDER BY occurences DESC
+
+ -- Average LOS by department
+SELECT department, ROUND(AVG(CAST(DATEDIFF(DAY, admit_date, discharge_date) AS FLOAT)), 2) AS avg_los_days
+FROM dbo.admissions
+WHERE discharge_date IS NOT NULL
+GROUP BY department
+ORDER BY avg_los_days DESC;
+
+-- Open encounters count
+SELECT COUNT(*) AS open_encounters
+FROM dbo.admissions
+WHERE is_open_encounter = 1;
 
 --Cost comparison: Readmitted vs non_readmitted patients
 SELECT
