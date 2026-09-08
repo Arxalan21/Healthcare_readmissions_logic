@@ -1,7 +1,12 @@
--- ============================================================
--- Data Cleaning Tasks
--- ============================================================
-
+/* =================================================================
+ File: 03_Data_cleaning.sql
+ Purpose: Standardizes department names and insurance types, flags
+          open encounters, invalid ICD10_Codes, length_of_stay outliers,
+          and duplicate patients.
+ Run order: 3rd(After 02_import_data.sql)
+ Author: Arsalan Gulzar
+ Project:Healthcare Readmissions Analysis
+ ==================================================================*/
 -- 1. Standardize department names (messy casing/spelling/abbreviations)
 
 UPDATE dbo.admissions
